@@ -1,11 +1,14 @@
+/* ПЕРЕИМЕНУЙ ВСЕ IMG(ОСТАВИТЬ ТОЛЬКО СЛОВА, НУ МАКСИМУМ ТИПА ТАКОГО desk-640.jpg*/
+
 body{
   font-family: sans-serif;
   margin: 0;
-  
+  /* Убирай пустые строки и мои комменты после */
 }
 
+/* Рекомендация: после первой { ставить пробел(.header {)*/
 .header{
- 
+  /* Убирай пустые строки и мои комменты после */
   padding: 17px 0;
   width: 100%;
   top: 0;
@@ -23,16 +26,17 @@ body{
 }
 
 .container{
-  width: 1400px;
+  max-width: 1400px;
   box-sizing: border-box;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
 }
-   
-@media (max-width:1369px){
+ 
+/* Поправь вложенность внизу */
+@media (max-width:1369px) {
   .container {
-    width: 100%;
+    max-width: 100%;
 }
 
 } 
@@ -51,10 +55,13 @@ body{
   bottom: -3px;
   width: 0;
   height: 2px;
+  /* Убери лишний пробел внизу вконце */
   background-color:rgb(25, 146, 65) ;
+  /* Заменить запятую на точку внизу тут и на строке 72*/
   transition: all 0,5s;
 }
 
+/* При использовании after ставится две : типа такого ::after */
 .menu-item:hover:after{
   content: "";
   width: 100%;
@@ -159,8 +166,8 @@ body{
 }
 
 .promo{
-  
-  background:url(../img/model-1280.jpg) center center no-repeat;
+  /* Внутри после url в скобках надо ставить кавычки url("../img////") */
+  background:url(../img/model.jpg) center center no-repeat;
   background-size: cover;
   padding: 120px 0 160px ;
   width: 100%;
@@ -525,7 +532,12 @@ body{
   position: relative;
   z-index: 1;
   
-}  
+}
+
+.step-heading span {
+  position: relative;
+  z-index: 3;
+}
  
 .step-heading::before{
   content: attr(data-number);
@@ -961,7 +973,7 @@ body{
   .product-content-text{
     font-size: 18px;
     line-height: 22px;
-    width: 460px;
+    max-width: 460px;
   }
  }
 
@@ -979,7 +991,7 @@ body{
   .product-content-text{
     font-size: 12px;
     line-height: 18px;
-    width: 285px;
+    max-width: 285px;
   }
  }
  
@@ -1073,27 +1085,28 @@ body{
 
 @media(max-width:1210px){
   .product-img{
-   width: 400px;
+   max-width: 400px;
     
   }
  }
 
  @media(max-width:768px){
   .product-img{
-   width: 300px;
+   max-width: 300px;
     
   }
  }
 
  @media(max-width:375px){
   .product-img{
-   width: 250px;
+   max-width: 250px;
     
   }
  }
 
  .product-card{
   position: absolute;
+  border-radius: 4px;
   left: 0;
   bottom: 0;
   box-shadow: 1px 1px 10px #000;
@@ -1113,6 +1126,7 @@ body{
   }
  }
 
+ /* УДАЛИ ВСЕ НЕИСПОЛЬЗУЕМЫЕ(ПУСТЫЕ) СТИЛИ КАК ВНИЗУ */
  @media(max-width:499px){
   .product-card{
     
@@ -1130,7 +1144,7 @@ body{
  
  
  .card{
-  width: 296px;
+  max-width: 296px;
   background-color: #fff;
   border-radius: 4px;
   display: flex;
